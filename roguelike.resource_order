@@ -16,5 +16,11 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"server_data","order":1,"path":"scripts/server_data/server_data.yy",},
+    {"name":"rClient","order":1,"path":"rooms/rClient/rClient.yy",},
+    {"name":"oClient","order":1,"path":"objects/oClient/oClient.yy",},
+    {"name":"oMenu","order":2,"path":"objects/oMenu/oMenu.yy",},
+    {"name":"rServer","order":2,"path":"rooms/rServer/rServer.yy",},
+  ],
 }
