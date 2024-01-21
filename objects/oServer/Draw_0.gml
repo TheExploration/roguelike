@@ -1,2 +1,2 @@
 /// @description Draw Total Players
-DrawPlayers();
+playercount();

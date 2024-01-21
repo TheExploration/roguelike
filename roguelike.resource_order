@@ -5,6 +5,7 @@
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+    {"name":"Player","order":5,"path":"folders/Objects/Player.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -19,6 +20,9 @@
   "ResourceOrderSettings": [
     {"name":"server_data","order":1,"path":"scripts/server_data/server_data.yy",},
     {"name":"rClient","order":1,"path":"rooms/rClient/rClient.yy",},
+    {"name":"oWall","order":6,"path":"objects/oWall/oWall.yy",},
+    {"name":"PlayerUtils","order":2,"path":"scripts/PlayerUtils/PlayerUtils.yy",},
+    {"name":"oPlayer1","order":1,"path":"objects/oPlayer1/oPlayer1.yy",},
     {"name":"oClient","order":1,"path":"objects/oClient/oClient.yy",},
     {"name":"oMenu","order":2,"path":"objects/oMenu/oMenu.yy",},
     {"name":"rServer","order":2,"path":"rooms/rServer/rServer.yy",},
