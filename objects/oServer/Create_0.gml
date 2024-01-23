@@ -5,7 +5,8 @@ port = 6927;
 max_players = 4;
 is_client = false;
 server = network_create_server(network_socket_tcp, port, max_players);
-total_players = ds_list_create();
+total_players = ds_list_create(); //List of sockets
+player_ids = ds_list_create(); //List of player ids
 
 //Display Error
 if (server < 0) {

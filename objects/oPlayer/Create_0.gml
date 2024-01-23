@@ -2,8 +2,7 @@
 randomize();
 
 //Network Vars
-var _choice = irandom_range(1, 10000);
-my_id = _choice;
+my_id = -1;
 
 //Movement
 hsp = 0;

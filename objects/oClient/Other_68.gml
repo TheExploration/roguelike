@@ -13,7 +13,23 @@ switch (PACKET_ID) {
 		var player_y = buffer_read(packet, buffer_s16);
 		var player_angle = buffer_read(packet, buffer_s16);
 		
-		update_players(pid, player_x, player_y, player_angle);
+		update_move_players(pid, player_x, player_y, player_angle);
+	break;
+	case network.join:
+		var pid = buffer_read(packet, buffer_u16);
+		if (pid != -1) {
+			
+			player.my_id = pid;
+			idd = pid;
+			ds_map_add(instances, idd, player)
+		}
+	break;
+	case network.disconnect:
+		var dpid = buffer_read(packet, buffer_u16);
+		if (!is_undefined(ds_map_find_value(instances, dpid))) {
+			instance_destroy(ds_map_find_value(instances, dpid));
+			ds_map_delete(instances, dpid);
+		}
 	break;
 }
 

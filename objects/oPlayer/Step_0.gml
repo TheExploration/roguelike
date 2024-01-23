@@ -8,12 +8,13 @@ if (instance_exists(oClient) && (my_id == oClient.idd)) {
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	//Move
 	move_and_collide(hsp, vsp, oWall);
+	if (my_id != -1) {
+		//Send our data
+		var buff = write_move_buffer(my_id, x, y, image_angle)
 	
-	//Send our data
-	var buff = write_move_buffer(my_id, x, y, image_angle)
-	
-	network_send_packet(oClient.client, buff, buffer_tell(buff));
-	buffer_delete(buff);
+		network_send_packet(oClient.client, buff, buffer_tell(buff));
+		buffer_delete(buff);
+	}
 	
 }
 if (instance_exists(oServer) && (my_id == oServer.idd)) {

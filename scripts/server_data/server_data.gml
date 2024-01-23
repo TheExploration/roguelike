@@ -14,7 +14,7 @@ function server_data(){
 			
 			if (is_client) {
 				
-				update_players(pid, player_x, player_y, player_angle);
+				update_move_players(pid, player_x, player_y, player_angle);
 				
 			}
 

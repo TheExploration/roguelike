@@ -21,7 +21,7 @@ function write_move_buffer(pid, player_x, player_y, player_angle) {
 	return buff;
 }
 
-function update_players(pid, player_x, player_y, player_angle) {
+function update_move_players(pid, player_x, player_y, player_angle) {
 	
 			var find_player = ds_map_find_value(instances, pid);
 		
@@ -29,6 +29,7 @@ function update_players(pid, player_x, player_y, player_angle) {
 			if (is_undefined(find_player)) {
 				//Create the player
 				var _p = instance_create_layer(random(room_width), random(room_height), "Instances", oPlayer1);
+				_p.my_id = pid;
 				ds_map_add(instances, pid, _p);	
 			} else {
 				if (idd != pid) && (instance_exists(find_player)) {
@@ -42,4 +43,25 @@ function update_players(pid, player_x, player_y, player_angle) {
 				}
 			}
 		
+}
+
+function server_assign_id() {
+	var pid = -1;
+	if (ds_list_find_index(player_ids, 1) == -1) {
+		ds_list_add(player_ids, 1);
+		pid = 1;
+	} else if (ds_list_find_index(player_ids, 2) == -1) {
+		ds_list_add(player_ids, 2);
+		pid = 2;
+	} else if (ds_list_find_index(player_ids, 3) == -1) {
+		ds_list_add(player_ids, 3);
+		pid = 3;
+	} else if (ds_list_find_index(player_ids, 4) == -1) {
+		ds_list_add(player_ids, 4);
+		pid = 4;
+	} else {
+		//server full
+	}
+	return pid;
+	
 }
