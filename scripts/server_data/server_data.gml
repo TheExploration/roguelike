@@ -23,12 +23,10 @@ function server_data(){
 			//Send to clients
 			var buff = write_move_buffer(pid, player_x, player_y, player_angle);
 			
-			
-			for (var i = 0; i < ds_list_size(total_players); i++) {
-				
-				network_send_packet(ds_list_find_value(total_players, i), buff, buffer_tell(buff));
-			}
+			send_packet_all(total_players, buff);
+	
 			buffer_delete(buff);
+			
 		break;
 		#endregion
 			
@@ -47,10 +45,8 @@ function server_data(){
 			buffer_write(tbuff, buffer_string, text_message);
 			
 			//Send to all players
-			for (var i = 0; i < ds_list_size(total_players); i++) {
-				network_send_packet(ds_list_find_value(total_players, i), tbuff, buffer_tell(tbuff));
-				
-			}
+			send_packet_all(total_players, tbuff);
+			
 			
 			//Delete the chat buffer after it was sent
 			buffer_delete(tbuff);
