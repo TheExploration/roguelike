@@ -3,7 +3,8 @@
 enum network {
 	join,
 	move,
-	disconnect
+	disconnect,
+	chat
 }
 	
 

@@ -6,6 +6,7 @@ function server_data(){
 	var PACKET_ID = buffer_read(packet, buffer_u8);
 	
 	switch (PACKET_ID) {
+		#region Movement
 		case network.move:
 			var pid = buffer_read(packet, buffer_u16);
 			var player_x = buffer_read(packet, buffer_s16);
@@ -29,8 +30,29 @@ function server_data(){
 			}
 			buffer_delete(buff);
 		break;
+		#endregion
 			
+		#region Chat
+		case network.chat:
+			//Get the string from buffer
+			var text_message = buffer_read(packet, buffer_string);
 			
+			//Send that string back to all the other clients
+			var tbuff = buffer_create(32, buffer_grow, 1);
+			buffer_seek(tbuff, buffer_seek_start, 0);
+			buffer_write(tbuff, buffer_u8, network.chat);
+			buffer_write(tbuff, buffer_string, text_message);
 			
+			//Send to all players
+			for (var i = 0; i < ds_list_size(total_players); i++) {
+				network_send_packet(ds_list_find_value(total_players, i), tbuff, buffer_tell(tbuff));
+				
+			}
+			
+			//Delete the chat buffer after it was sent
+			buffer_delete(tbuff);
+			
+		break;
+		#endregion
 	}
 }
