@@ -21,7 +21,7 @@
     {"name":"server_data","order":1,"path":"scripts/server_data/server_data.yy",},
     {"name":"sBullet","order":1,"path":"sprites/sBullet/sBullet.yy",},
     {"name":"rClient","order":1,"path":"rooms/rClient/rClient.yy",},
-    {"name":"oWall","order":6,"path":"objects/oWall/oWall.yy",},
+    {"name":"oSolid","order":6,"path":"objects/oSolid/oSolid.yy",},
     {"name":"PlayerUtils","order":2,"path":"scripts/PlayerUtils/PlayerUtils.yy",},
     {"name":"oPlayer1","order":1,"path":"objects/oPlayer1/oPlayer1.yy",},
     {"name":"oChat","order":7,"path":"objects/oChat/oChat.yy",},
