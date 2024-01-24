@@ -42,6 +42,7 @@
     {"id":{"name":"PlayerUtils","path":"scripts/PlayerUtils/PlayerUtils.yy",},},
     {"id":{"name":"oPlayer1","path":"objects/oPlayer1/oPlayer1.yy",},},
     {"id":{"name":"oServer","path":"objects/oServer/oServer.yy",},},
+    {"id":{"name":"oChat","path":"objects/oChat/oChat.yy",},},
     {"id":{"name":"ServerUtils","path":"scripts/ServerUtils/ServerUtils.yy",},},
     {"id":{"name":"oClient","path":"objects/oClient/oClient.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
