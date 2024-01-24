@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+///@Description Server Utilities and networking :D
 function playercount() {
 	var all_players = ds_list_size(total_players);
 	
