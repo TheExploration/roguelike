@@ -19,6 +19,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"server_data","order":1,"path":"scripts/server_data/server_data.yy",},
+    {"name":"sBullet","order":1,"path":"sprites/sBullet/sBullet.yy",},
     {"name":"rClient","order":1,"path":"rooms/rClient/rClient.yy",},
     {"name":"oWall","order":6,"path":"objects/oWall/oWall.yy",},
     {"name":"PlayerUtils","order":2,"path":"scripts/PlayerUtils/PlayerUtils.yy",},

@@ -37,6 +37,7 @@
   "resources": [
     {"id":{"name":"server_data","path":"scripts/server_data/server_data.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},},
     {"id":{"name":"rClient","path":"rooms/rClient/rClient.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"PlayerUtils","path":"scripts/PlayerUtils/PlayerUtils.yy",},},
