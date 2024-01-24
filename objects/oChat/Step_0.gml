@@ -12,10 +12,7 @@ if (focus) {
 			buffer_seek(tbuff, buffer_seek_start, 0);
 			buffer_write(tbuff, buffer_u8, network.chat);
 			buffer_write(tbuff, buffer_string, "[Host]: "+string(text));
-			for (var i = 0; i < ds_list_size(oServer.total_players); i++) {
-				network_send_packet(ds_list_find_value(oServer.total_players, i), tbuff, buffer_tell(tbuff));
-				
-			}
+			send_packet_all(oServer.total_players, tbuff);
 			buffer_delete(tbuff);
 			
 		} else {

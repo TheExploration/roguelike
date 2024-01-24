@@ -65,3 +65,10 @@ function server_assign_id() {
 	return pid;
 	
 }
+
+function send_packet_all(total_players, buff) {
+	for (var i = 0; i < ds_list_size(total_players); i++) {
+		network_send_packet(ds_list_find_value(total_players, i), buff, buffer_tell(buff));
+	}
+	buffer_delete(buff);
+}

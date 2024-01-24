@@ -23,10 +23,7 @@ switch(data_type) {
 		buffer_seek(dbuff, buffer_seek_start, 0);
 		buffer_write(dbuff, buffer_u8, network.disconnect);
 		buffer_write(dbuff, buffer_u16, dpid);
-		for (var i = 0; i < ds_list_size(total_players); i++) {
-				
-			network_send_packet(ds_list_find_value(total_players, i), dbuff, buffer_tell(dbuff));
-		}
+		send_packet_all(total_players, dbuff);
 		ds_list_delete(player_ids, index);
 		buffer_delete(dbuff);
 		

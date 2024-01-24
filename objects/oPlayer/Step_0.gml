@@ -27,10 +27,7 @@ if (instance_exists(oServer) && (my_id == oServer.idd)) {
 	
 	//Send our data
 	var buff = write_move_buffer(my_id, x, y, image_angle)
-	for (var i = 0; i < ds_list_size(oServer.total_players); i++) {
-				
-		network_send_packet(ds_list_find_value(oServer.total_players, i), buff, buffer_tell(buff));
-	}
+	send_packet_all(oServer.total_players, buff);
 	buffer_delete(buff);
 }
 
