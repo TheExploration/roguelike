@@ -13,6 +13,8 @@ if (client < 0) {
 	game_restart();
 	
 }
+//Chat
+instance_create_layer(x,y,"Instances", oChat);
 
 //Players
 instances = ds_map_create();
