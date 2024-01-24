@@ -36,7 +36,10 @@ function server_data(){
 		case network.chat:
 			//Get the string from buffer
 			var text_message = buffer_read(packet, buffer_string);
-			
+			if (instance_exists(oChat)) {
+				ds_list_add(global.CHAT, text_message);
+			}
+				
 			//Send that string back to all the other clients
 			var tbuff = buffer_create(32, buffer_grow, 1);
 			buffer_seek(tbuff, buffer_seek_start, 0);

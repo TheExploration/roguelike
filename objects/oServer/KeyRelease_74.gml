@@ -5,5 +5,7 @@ if (player == noone) {
 	player = instance_create_layer(random(room_width), random(room_height), "Instances", oPlayer1);
 	idd = 0;
 	player.my_id = idd;
-	ds_map_add(instances, idd, player)
+	ds_map_add(instances, idd, player);
+	
+	instance_create_layer(x,y,"Instances", oChat);
 }
