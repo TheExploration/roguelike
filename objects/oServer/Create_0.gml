@@ -16,6 +16,7 @@ if (server < 0) {
 
 
 //Players
+player = noone;
 instances = ds_map_create();
 idd = 0;
 
