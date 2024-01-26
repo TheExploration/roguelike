@@ -24,8 +24,12 @@ function calc_movement() {
 	//Diagonal
 
 
-	if (hsp != 0 && vsp != 0) {
-		hsp = hsp/sqrt(2);
-		vsp = vsp/sqrt(2);
+	if (hsp != 0 || vsp != 0) {
+		
+		var dir = point_direction(0, 0, moveX,moveY);
+		
+		
+		hsp = lengthdir_x(move_spd, dir)
+		vsp = lengthdir_y(move_spd, dir);
 	}
 }
