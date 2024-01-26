@@ -8,7 +8,7 @@ my_id = -1;
 hsp = 0;
 vsp = 0;
 has_control = true;
-move_spd = 3;
+move_spd = 5;
 
 
 
