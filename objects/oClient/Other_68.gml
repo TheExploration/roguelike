@@ -31,10 +31,23 @@ switch (PACKET_ID) {
 	#region Disconnect
 	case network.disconnect:
 		var dpid = buffer_read(packet, buffer_u16);
-		if (!is_undefined(ds_map_find_value(instances, dpid))) {
-			instance_destroy(ds_map_find_value(instances, dpid));
-			ds_map_delete(instances, dpid);
+		
+		
+		var disconnect_player = ds_map_find_value(instances, dpid);
+		
+		if (dpid != idd) {
+			if (!is_undefined(disconnect_player)) {
+				instance_destroy(disconnect_player);
+				ds_map_delete(instances, dpid);
+				
+				//Display in chat
+				ds_list_add(global.CHAT, string(dpid)+" has left the game.");
+			}
+		} else {
+			room_goto(rMenu);
 		}
+		
+		
 	break;
 	#endregion
 	#region Chat
