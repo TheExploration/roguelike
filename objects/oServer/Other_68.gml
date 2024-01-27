@@ -10,7 +10,7 @@ switch(data_type) {
 		buffer_seek(jbuff, buffer_seek_start, 0);
 		buffer_write(jbuff, buffer_u8, network.join);
 		buffer_write(jbuff, buffer_u16, jpid);
-		network_send_packet(player_socket, jbuff, buffer_tell(jbuff));
+		send_packet_all(total_players, jbuff);
 		buffer_delete(jbuff);
 		break;
 	

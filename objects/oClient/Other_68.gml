@@ -20,7 +20,7 @@ switch (PACKET_ID) {
 	#region Join
 	case network.join:
 		var pid = buffer_read(packet, buffer_u16);
-		if (pid != -1) {
+		if (pid != -1 &&) {
 			
 			player.my_id = pid;
 			idd = pid;
