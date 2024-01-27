@@ -7,6 +7,7 @@ draw_text(1000, 50, "Client Id: " + string(idd));
 if (idd == -1) {
 	draw_text(1000, 80, "Playing Locally");
 }
+draw_text(1000, 50, "Ping: " + string(latency));
 
 
 

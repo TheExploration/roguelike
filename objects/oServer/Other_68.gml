@@ -7,14 +7,20 @@ switch(data_type) {
 		ds_list_add(total_players, player_socket);
 		var jpid = server_assign_id();
 		var jbuff = buffer_create(32, buffer_grow, 1);
+		var cbuff =buffer_create(32, buffer_grow, 1);
+		
 		buffer_seek(jbuff, buffer_seek_start, 0);
-		var cbuff = jbuff;
+		buffer_seek(cbuff, buffer_seek_start, 0);
+		
 		buffer_write(jbuff, buffer_u8, network.join);
 		buffer_write(cbuff, buffer_u8, network.chatjoin);
+		
 		buffer_write(jbuff, buffer_u16, jpid);
 		buffer_write(cbuff, buffer_u16, jpid);
+		
 		network_send_packet(player_socket, jbuff, buffer_tell(jbuff));
 		send_packet_all(total_players, cbuff);
+		
 		buffer_delete(jbuff);
 		buffer_delete(cbuff);
 		break;
