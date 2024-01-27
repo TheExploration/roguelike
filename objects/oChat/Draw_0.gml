@@ -18,7 +18,7 @@ var yy = 64;
 
 //Loop through the list and draw the messages
 for (var i = 0; i < ds_list_size(global.CHAT); i++) {
-	draw_text_ext(16, yy, ds_list_find_value(global.CHAT, i), -1, max_text);
+	draw_text_ext(16, yy, ds_list_find_value(global.CHAT, i), -1, 1000);
 	
 	yy+=16;
 }

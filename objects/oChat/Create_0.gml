@@ -6,7 +6,7 @@ stored_messages = 10;
 focus = false;
 cursor = "|";
 text = "";
-max_text = 200;
+max_text = 100;
 alarm[0] = game_get_speed(gamespeed_fps)/2;
 
 
