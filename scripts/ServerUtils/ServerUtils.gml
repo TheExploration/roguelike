@@ -72,7 +72,3 @@ function send_packet_all(total_players, buff) {
 	buffer_delete(buff);
 }
 
-function disconnect() {
-//Deprecated
-
-}

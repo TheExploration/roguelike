@@ -5,7 +5,8 @@ enum network {
 	move,
 	disconnect,
 	chat,
-	latency
+	latency,
+	chatjoin
 }
 	
 

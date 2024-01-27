@@ -17,10 +17,18 @@ switch (PACKET_ID) {
 		update_move_players(pid, player_x, player_y, player_angle);
 	break;
 	#endregion
+	#region Join Chat msg
+	case network.chatjoin:
+	
+		var pid = buffer_read(packet, buffer_u16);
+		ds_list_add(global.CHAT,string(pid) + " has joined the game.");
+		
+	break;
+	#endregion
 	#region Join
 	case network.join:
 		var pid = buffer_read(packet, buffer_u16);
-		if (pid != -1 &&) {
+		if (pid != -1) {
 			
 			player.my_id = pid;
 			idd = pid;
