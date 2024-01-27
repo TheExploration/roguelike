@@ -1,6 +1,8 @@
 //Handle Packets Coming from Clients
 function server_data(){
 	var packet = async_load[? "buffer"];
+	var socket = async_load[? "id"];
+	
 	buffer_seek(packet, buffer_seek_start, 0);
 	
 	var PACKET_ID = buffer_read(packet, buffer_u8);
@@ -63,7 +65,11 @@ function server_data(){
 			var lbuff = buffer_create(32, buffer_grow, 1);
 			buffer_seek(lbuff, buffer_seek_start, 0);
 			buffer_write(lbuff, buffer_u8, network.latency);
-			
+			buffer_write(lbuff, buffer_u32, _time);
+			network_send_packet(socket, lbuff, buffer_tell(lbuff));
+			buffer_delete(lbuff)
+		break;
+		
 		#endregion
 	}
 }

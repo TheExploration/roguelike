@@ -11,7 +11,6 @@ network_send_packet(client, lbuff, buffer_tell(lbuff));
 timeout++;
 
 if (timeout > 60*3){
-	disconnect();
 	room_goto(rMenu);
 }
 

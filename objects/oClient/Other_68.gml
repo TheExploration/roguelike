@@ -48,6 +48,19 @@ switch (PACKET_ID) {
 		}
 	break;
 	#endregion
+	
+	#region Latency
+	case network.latency:
+		//Read the time
+		var _got_time = buffer_read(packet, buffer_u32);
+		
+		//Set latency
+		latency = current_time - _got_time;
+		
+		//reset timeout
+		timeout = 0;
+	break;
+	#endregion
 }
 
 
