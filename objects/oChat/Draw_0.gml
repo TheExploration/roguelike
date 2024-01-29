@@ -12,7 +12,7 @@ if (focus) {
 } else {
 	draw_text(16, room_height/2-8, "Press ENTER to chat.");
 }
-
+//go
 //Draw messages from the chat
 var yy = 64;
 
