@@ -8,7 +8,9 @@ switch(data_type) {
 		var jpid = server_assign_id();
 		var jbuff = buffer_create(32, buffer_grow, 1);
 		var cbuff =buffer_create(32, buffer_grow, 1);
-		
+		if (instance_exists(oChat)) {
+			ds_list_add(global.CHAT,string(jpid) + " has joined the game.");
+		}
 		buffer_seek(jbuff, buffer_seek_start, 0);
 		buffer_seek(cbuff, buffer_seek_start, 0);
 		
@@ -23,6 +25,8 @@ switch(data_type) {
 		
 		buffer_delete(jbuff);
 		buffer_delete(cbuff);
+		
+		
 		break;
 	
 	case network_type_disconnect:
@@ -30,6 +34,10 @@ switch(data_type) {
 		var index = ds_list_find_index(total_players, disconnect_socket);
 		ds_list_delete(total_players, index);
 		var dpid = ds_list_find_value(player_ids, index);
+		if (instance_exists(oChat)) {
+			//Display in chat
+				ds_list_add(global.CHAT, string(dpid)+" has left the game.");
+		}
 		var dbuff = buffer_create(32, buffer_grow, 1);
 		buffer_seek(dbuff, buffer_seek_start, 0);
 		buffer_write(dbuff, buffer_u8, network.disconnect);
