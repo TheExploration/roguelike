@@ -8,5 +8,6 @@ server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
-
+ssdsd
 server.bind(6927);
+a
