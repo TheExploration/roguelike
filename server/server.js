@@ -4,9 +4,11 @@ let msgpack = require("@msgpack/msgpack");
 
 let server = dgram.createSocket("udp4");
 
+server.bind(6927);
+
+
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
 
-server.bind(6927);
