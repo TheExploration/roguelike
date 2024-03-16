@@ -6,6 +6,8 @@ let server = dgram.createSocket("udp4");
 
 server.bind(6927);
 
+let 
+
 const data = {
     CONNECT: "connect",
     DISCONNECT: "disconnect",
