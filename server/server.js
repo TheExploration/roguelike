@@ -6,7 +6,7 @@ let server = dgram.createSocket("udp4");
 
 server.bind(6927);
 
-let 
+const players = new Map();
 
 const data = {
     CONNECT: "connect",
