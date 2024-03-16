@@ -7,8 +7,12 @@ let server = dgram.createSocket("udp4");
 server.bind(6927);
 
 const data = {
-    CONNECT
-}
+    CONNECT: "connect",
+    DISCONNECT: "disconnect",
+    MOVE: "move",
+    FIRE: "fire",
+    CHAT: "chat"
+};
 
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
