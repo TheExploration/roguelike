@@ -51,10 +51,10 @@ server.on("message", function(msg, rinfo){
         case DATATYPE.disconnect:
             
         break;
-        case DATATYPE.connect:
+        case DATATYPE.move:
             
         break;
-        case DATATYPE.connect:
+        case DATATYPE.chat:
             
         break;
 
