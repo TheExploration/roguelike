@@ -58,7 +58,9 @@ server.on("message", function(msg, rinfo){
             
         break;
         case DATATYPE.move:
-            
+            let move = {
+                
+            }
         break;
         case DATATYPE.chat:
             
