@@ -46,7 +46,7 @@ server.on("message", function(msg, rinfo){
     switch (data.type) {
         case DATATYPE.connect:
             let jpid = server_assign_id(rinfo.address);
-            
+            let 
         break;
         case DATATYPE.disconnect:
             
