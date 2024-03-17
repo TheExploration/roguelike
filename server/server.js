@@ -25,7 +25,9 @@ function server_assign_id(address){
         return players.get(address);
     
     } else {
-        
+        if (players.hasValue(1)) {
+            
+        }
     }
     
     
