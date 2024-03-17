@@ -65,6 +65,7 @@ server.on("message", function(msg, rinfo){
                 id : data.id
             };
             
+            
         break;
         case DATATYPE.chat:
             
