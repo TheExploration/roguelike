@@ -13,9 +13,9 @@ const players = new BiMap();
 const TYPE = {
     connect: 0,
     disconnec: 1,
-    MOVE: 2,
-    CHAT: 3,
-    FIRE: 4
+    move: 2,
+    chat: 3,
+    fire: 4
 };
 let data;
 
