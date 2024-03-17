@@ -20,7 +20,7 @@ const DATATYPE = {
 
 let data;
 
-function server_assign_id(){
+function server_assign_id(address){
 
     
     
