@@ -7,14 +7,14 @@ network_connect_raw(socket, ip, port);
 
 
 player_data = {
-	type : TYPE.connect,
+	type : DATATYPE.connect,
 	x : -1,
 	y : -1,
 	id : -1
 };
 idd = -1;
 
-enum TYPE {
+enum DATATYPE {
 	connect,
 	disconnect,
 	move,
