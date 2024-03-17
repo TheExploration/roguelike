@@ -29,6 +29,8 @@ function server_assign_id(address){
 
         } else if (players.hasValue(2)) {
 
+        } else if (players.hasValue(3)) {
+        } else if (players.hasValue(4)) {
         }
     }
     
