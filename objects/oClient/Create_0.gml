@@ -23,3 +23,7 @@ enum DATATYPE {
 };
 
 
+//Latency and Timeout
+latency = 0;
+timeout = 0;
+
