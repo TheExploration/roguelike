@@ -17,9 +17,11 @@ const TYPE = {
     CHAT: 3,
     FIRE: 4
 };
+let data;
+
 
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
-    data
+    data 
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
