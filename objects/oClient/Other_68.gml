@@ -8,6 +8,9 @@ switch (data.type) {
 	case DATATYPE.connect:
 		latency = current_time - data.time;
 		timeout = 0;
+		if (idd = -1) {
+			idd = data.id;
+		}
 	break;
 	
 		
