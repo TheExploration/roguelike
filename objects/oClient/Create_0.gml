@@ -15,7 +15,7 @@ player_data = {
 idd = -1;
 
 enum TYPE {
-	connect,
+	connect: 1,
 	disconnect,
 	move,
 	chat,
