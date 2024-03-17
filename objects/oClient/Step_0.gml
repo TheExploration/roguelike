@@ -1,9 +1,9 @@
 /// @description Networking Step
 
-if (instance_exists(player)) {
-	player_data.x = oPlayer.x;
-	player_data.y = oPlayer.y;
-	player_data.id = idd;
+if (instance_exists(player) && player.my_id == idd) {
+	player_data.x = player.x;
+	player_data.y = player.y;
+	player_data.id = player.my_id;
 	send_struct(player_data);	
 }
 

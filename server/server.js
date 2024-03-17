@@ -51,7 +51,6 @@ server.on("message", function(msg, rinfo){
                 time : data.time,
                 id : jpid
             };
-            
             server.send(msgpack.encode(ping), rinfo.port, rinfo.address);
 
         break;

@@ -13,7 +13,9 @@ switch (data.type) {
 			player.my_id = idd;
 		}
 	break;
-	
+	case DATATYPE.move: 
+		
+	break;
 		
 	
 }
