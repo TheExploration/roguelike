@@ -13,6 +13,12 @@ player_data = {
 };
 idd = -1;
 
-
+enum TYPE {
+	connect,
+	disconnect,
+	move,
+	chat,
+	fire
+};
 
 
