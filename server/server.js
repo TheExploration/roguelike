@@ -28,7 +28,7 @@ server.on("message", function(msg, rinfo){
         case DATATYPE.connect:
             console.log("connect");
         break;
-        case DATATYPE.DISCONNECT:
+        case DATATYPE.disconnect:
             
         break;
         case DATATYPE.connect:
