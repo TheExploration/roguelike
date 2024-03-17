@@ -8,7 +8,7 @@ network_connect_raw(socket, ip, port);
 player = instance_create_layer(100,100, "Instances",oPlayer);
 
 player_data = {
-	type : DATATYPE.connect,
+	type : DATATYPE.move,
 	x : -1,
 	y : -1,
 	id : -1
