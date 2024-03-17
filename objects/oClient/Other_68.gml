@@ -10,6 +10,7 @@ switch (data.type) {
 		timeout = 0;
 		if (idd = -1) {
 			idd = data.id;
+			player.my_id = idd;
 		}
 	break;
 	
