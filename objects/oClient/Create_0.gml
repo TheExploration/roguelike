@@ -14,6 +14,11 @@ player_data = {
 };
 idd = -1;
 
+ping = {
+	type : DATATYPE.connect,
+	
+}
+
 enum DATATYPE {
 	connect,
 	disconnect,
@@ -26,4 +31,6 @@ enum DATATYPE {
 //Latency and Timeout
 latency = 0;
 timeout = 0;
+alarm[0] = 120;
+
 
