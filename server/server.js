@@ -28,9 +28,11 @@ function server_assign_id(address){
         if (!players.hasValue(1)) {
             players.set(address, 1);
         } else if (!players.hasValue(2)) {
-
+            players.set(address, 2);
         } else if (!players.hasValue(3)) {
+            players.set(address, 3);
         } else if (!players.hasValue(4)) {
+            players.set(address, 4);
         }
     }
     
