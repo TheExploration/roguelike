@@ -19,6 +19,7 @@ const TYPE = {
 };
 
 server.on("message", function(msg, rinfo){
-    console.log(msgpack.decode(msg).x);
+    console.log(msgpack.decode(msg));
+    data
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
