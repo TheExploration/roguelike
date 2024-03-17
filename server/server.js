@@ -1,4 +1,4 @@
-let dgram = require("dgram");
+const dgram = require("dgram");
 const msgpack = require("@msgpack/msgpack");
 
 const BiMap = require('bidirectional-map');
@@ -17,6 +17,7 @@ const TYPE = {
     chat: 3,
     fire: 4
 };
+
 let data;
 
 
