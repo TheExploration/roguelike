@@ -21,9 +21,10 @@
   ],
   "ResourceOrderSettings":[
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"oWall","order":2,"path":"objects/oWall/oWall.yy",},
+    {"name":"rLobby","order":1,"path":"rooms/rLobby/rLobby.yy",},
     {"name":"Config","order":2,"path":"scripts/Config/Config.yy",},
     {"name":"Networking","order":3,"path":"scripts/Networking/Networking.yy",},
-    {"name":"oWall","order":2,"path":"objects/oWall/oWall.yy",},
     {"name":"SnapBufferWriteMessagePack","order":1,"path":"scripts/SnapBufferWriteMessagePack/SnapBufferWriteMessagePack.yy",},
   ],
 }
