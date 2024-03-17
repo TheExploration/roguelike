@@ -20,6 +20,10 @@ const DATATYPE = {
 
 let data;
 
+function server_assign_id(){
+    
+}
+
 
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
