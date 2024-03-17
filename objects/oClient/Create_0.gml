@@ -5,6 +5,7 @@ ip = "6927.myqnapcloud.com";
 socket = network_create_socket(network_socket_udp);
 network_connect_raw(socket, ip, port);
 
+player = instance_create_layer(100,100, "Instances",oPlayer);
 
 player_data = {
 	type : DATATYPE.connect,
@@ -16,6 +17,7 @@ idd = -1;
 
 ping = {
 	type : DATATYPE.connect,
+	time : current_time
 	
 }
 
