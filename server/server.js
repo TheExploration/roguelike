@@ -26,7 +26,7 @@ server.on("message", function(msg, rinfo){
     data = msgpack.decode(msg);
     switch (data.type) {
         case DATATYPE.connect:
-            console.log("connect");
+            
         break;
         case DATATYPE.disconnect:
             
