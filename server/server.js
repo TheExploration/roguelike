@@ -12,7 +12,7 @@ const players = new BiMap();
 
 const TYPE = {
     connect: 0,
-    DISCONNECT: 1,
+    disconnec: 1,
     MOVE: 2,
     CHAT: 3,
     FIRE: 4
@@ -25,6 +25,18 @@ server.on("message", function(msg, rinfo){
     data = msgpack.decode(msg);
     switch (data.type) {
         case TYPE.connect:
+            
+        break;
+        case TYPE.DISCONNECT:
+            
+        break;
+        case TYPE.connect:
+            
+        break;
+        case TYPE.connect:
+            
+        break;
+
     }
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
