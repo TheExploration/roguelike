@@ -11,7 +11,7 @@ server.bind(6927);
 const players = new BiMap();
 
 const DATATYPE = {
-    connect: "asd",
+    connect: 0,
     disconnec: 1,
     move: 2,
     chat: 3,
