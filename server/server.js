@@ -21,9 +21,11 @@ const DATATYPE = {
 let data;
 
 function server_assign_id(address){
-    if (players.has(adress)) {
+    if (players.has(address)) {
         return players.get(address);
     
+    } else {
+        
     }
     
     
