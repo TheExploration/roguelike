@@ -10,7 +10,7 @@ server.bind(6927);
 
 const players = new BiMap();
 
-const DATA = {
+const TYPE = {
     CONNECT: "connect",
     DISCONNECT: "disconnect",
     MOVE: "move",
