@@ -22,6 +22,9 @@ let data;
 
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
-    data 
+    data = msgpack.decode(msg);
+    switch (data.type) {
+        case TYPE.connect:
+    }
     server.send("message recieved", rinfo.port, rinfo.address); 
 });

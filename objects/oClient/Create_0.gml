@@ -7,6 +7,7 @@ network_connect_raw(socket, ip, port);
 
 
 player_data = {
+	type : TYPE.connect,
 	x : -1,
 	y : -1,
 	id : -1
