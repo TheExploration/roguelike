@@ -46,7 +46,14 @@ server.on("message", function(msg, rinfo){
     switch (data.type) {
         case DATATYPE.connect:
             let jpid = server_assign_id(rinfo.address);
-            let 
+            let ping = {
+                type : DATATYPE.connect,
+                time : data.time,
+                id : jpid
+            };
+            msgpack.encode(ping);
+            server.send(ping, rinfo.port, rinfo.address);
+
         break;
         case DATATYPE.disconnect:
             
@@ -59,5 +66,5 @@ server.on("message", function(msg, rinfo){
         break;
 
     }
-    server.send("message recieved", rinfo.port, rinfo.address); 
+    console.log("message recieved"+ String(rinfo.port)+String( rinfo.address)); 
 });
