@@ -1,6 +1,6 @@
 let dgram = require("dgram");
 
-import msgpack from '@msgpack/msgpack';
+import {encode, decode} from "messagepack";
 import BiMap from 'bidirectional-map'
 
 
@@ -19,6 +19,6 @@ const data = {
 };
 
 server.on("message", function(msg, rinfo){
-    console.log(msgpack.decode(msg));
+    console.log(decode(msg));
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
