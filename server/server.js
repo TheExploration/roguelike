@@ -10,7 +10,7 @@ server.bind(6927);
 
 const players = new BiMap();
 
-const TYPE = {
+const DATATYPE = {
     connect: 0,
     disconnec: 1,
     move: 2,
@@ -25,16 +25,16 @@ server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
     data = msgpack.decode(msg);
     switch (data.type) {
-        case TYPE.connect:
+        case DATATYPE.connect:
             console.log("connect");
         break;
-        case TYPE.DISCONNECT:
+        case DATATYPE.DISCONNECT:
             
         break;
-        case TYPE.connect:
+        case DATATYPE.connect:
             
         break;
-        case TYPE.connect:
+        case DATATYPE.connect:
             
         break;
 
