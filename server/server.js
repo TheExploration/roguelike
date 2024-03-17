@@ -1,6 +1,6 @@
 let dgram = require("dgram");
-let msgpack = require("@messagepack/msgpack");
-import {encode, decode} from "messagepack";
+import { encode, decode } from "@msgpack/msgpack";
+
 import BiMap from 'bidirectional-map'
 
 
