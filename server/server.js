@@ -65,7 +65,7 @@ server.on("message", function(msg, rinfo){
                 id : data.id
             };
             for (let address of players.keys()) {
-                if (player != rinfo.address) {
+                if (address != rinfo.address) {
                     server.send(msgpack.encode(move), rinfo.port, player);
                 }
             }
