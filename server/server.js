@@ -19,6 +19,6 @@ const data = {
 };
 
 server.on("message", function(msg, rinfo){
-    console.log(messagepack.decode(msg));
+    console.log(msgpack.decode(msg));
     server.send("message recieved", rinfo.port, rinfo.address); 
 });
