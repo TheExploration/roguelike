@@ -11,11 +11,11 @@ server.bind(6927);
 const players = new BiMap();
 
 const TYPE = {
-    CONNECT: "connect",
-    DISCONNECT: "disconnect",
-    MOVE: "move",
-    FIRE: "fire",
-    CHAT: "chat"
+    connect: 0,
+    DISCONNECT: 1,
+    MOVE: 2,
+    CHAT: 3,
+    FIRE: 4
 };
 
 server.on("message", function(msg, rinfo){
