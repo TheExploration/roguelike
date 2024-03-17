@@ -64,7 +64,11 @@ server.on("message", function(msg, rinfo){
                 y : data.y,
                 id : data.id
             };
-            
+            for (let address of players.keys()) {
+                if (player != rinfo.address) {
+                    server.send(msgpack.encode(move), rinfo.port, player);
+                }
+            }
             
         break;
         case DATATYPE.chat:
