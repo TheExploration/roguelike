@@ -1,5 +1,6 @@
 let dgram = require("dgram");
-let msgpack = require("@msgpack/msgpack");
+
+import msgpack from '@msgpack/msgpack';
 import BiMap from 'bidirectional-map'
 
 
@@ -7,7 +8,7 @@ let server = dgram.createSocket("udp4");
 
 server.bind(6927);
 
-const players = new Map();
+const players = new BiMap();
 
 const data = {
     CONNECT: "connect",
