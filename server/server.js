@@ -25,12 +25,12 @@ function server_assign_id(address){
         return players.get(address);
     
     } else {
-        if (players.hasValue(1)) {
+        if (!players.hasValue(1)) {
+            
+        } else if (!players.hasValue(2)) {
 
-        } else if (players.hasValue(2)) {
-
-        } else if (players.hasValue(3)) {
-        } else if (players.hasValue(4)) {
+        } else if (!players.hasValue(3)) {
+        } else if (!players.hasValue(4)) {
         }
     }
     
