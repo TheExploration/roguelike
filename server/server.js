@@ -35,7 +35,7 @@ function server_assign_id(address){
             players.set(address, 4);
         }
     }
-    
+    return players.get(address);
     
 }
 
