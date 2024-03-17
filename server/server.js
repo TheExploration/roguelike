@@ -12,7 +12,7 @@ const players = new BiMap();
 
 const DATATYPE = {
     connect: 0,
-    disconnec: 1,
+    disconnect: 1,
     move: 2,
     chat: 3,
     fire: 4
