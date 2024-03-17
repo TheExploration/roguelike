@@ -51,8 +51,8 @@ server.on("message", function(msg, rinfo){
                 time : data.time,
                 id : jpid
             };
-            msgpack.encode(ping);
-            server.send(ping, rinfo.port, rinfo.address);
+            
+            server.send(msgpack.encode(ping), rinfo.port, rinfo.address);
 
         break;
         case DATATYPE.disconnect:
