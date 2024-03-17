@@ -1,5 +1,5 @@
 let dgram = require("dgram");
-const msgpack = require("@msgpack/msgpack");
+let msgpack = require("@msgpack/msgpack");
 
 import BiMap from 'bidirectional-map'
 
