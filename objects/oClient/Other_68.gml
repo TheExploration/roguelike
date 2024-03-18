@@ -14,15 +14,27 @@ switch (data.type) {
 		}
 	break;
 	case DATATYPE.move: 
-		for (var i = 0; i < instance_number(oPlayer); i++) {
-			var target = instance_find(oPlayer, i);
-			if (data.id == target.my_id) {
-				target.x = data.x;
-				target.y = data.y;
-				target.direction = data.dir;
+		var find_player = ds_map_find_value(instances, data.id);
+		
+		//If no instances, that means its not been created
+		if (is_undefined(find_player)) {
+			//Create the player
+			var _p = instance_create_layer(random(room_width), random(room_height), "Instances", oPlayer);
+			_p.my_id = data.id;
+			ds_map_add(instances, data.id, _p);	
+		} else {
+			if (idd != data.id) && (instance_exists(find_player)) {
+		
+						
 				
+				//Assign to the other players
+				find_player.x = data.x;
+				find_player.y = data.y;
+				find_player.image_angle = data.direction;
 			}
 		}
+	
+	
 	break;
 		
 	

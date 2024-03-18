@@ -7,6 +7,8 @@ network_connect_raw(socket, ip, port);
 
 player = instance_create_layer(100,100, "Instances",oPlayer);
 
+instances = ds_map_create();
+
 player_data = {
 	type : DATATYPE.move,
 	x : -1,
