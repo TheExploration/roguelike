@@ -19,6 +19,7 @@ switch (data.type) {
 			if (data.id == target.my_id) {
 				target.x = data.x;
 				target.y = data.y;
+				target.direction = data.dir;
 				
 			}
 		}
