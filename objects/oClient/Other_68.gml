@@ -14,7 +14,14 @@ switch (data.type) {
 		}
 	break;
 	case DATATYPE.move: 
-		
+		for (var i = 0; i < instance_number(oPlayer); i++) {
+			var target = instance_find(oPlayer, i);
+			if (data.id == target.my_id) {
+				target.x = data.x;
+				target.y = data.y;
+				
+			}
+		}
 	break;
 		
 	
