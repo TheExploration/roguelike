@@ -14,7 +14,7 @@ switch (data.type) {
 		}
 	break;
 	case DATATYPE.move: 
-	show_debug_message(data);
+	show_debug_message("MOVING");
 		var find_player = ds_map_find_value(instances, data.id);
 		
 		//If no instances, that means its not been created
