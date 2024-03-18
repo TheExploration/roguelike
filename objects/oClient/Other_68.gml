@@ -31,7 +31,7 @@ switch (data.type) {
 				//Assign to the other players
 				find_player.x = data.x;
 				find_player.y = data.y;
-				find_player.image_angle = data.direction;
+				find_player.image_angle = data.dir;
 			}
 		}
 	
