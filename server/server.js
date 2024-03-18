@@ -62,6 +62,7 @@ server.on("message", function(msg, rinfo){
                 type : DATATYPE.move,
                 x : data.x,
                 y : data.y,
+                dir : data.dir,
                 id : data.id
             };
             for (let address of players.keys()) {
