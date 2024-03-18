@@ -3,6 +3,7 @@
 if (instance_exists(player) && player.my_id == idd) {
 	player_data.x = player.x;
 	player_data.y = player.y;
+	player_data.dir = player.direction;
 	player_data.id = player.my_id;
 	send_struct(player_data);	
 }

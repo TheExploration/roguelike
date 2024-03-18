@@ -11,6 +11,7 @@ player_data = {
 	type : DATATYPE.move,
 	x : -1,
 	y : -1,
+	dir : 0,
 	id : -1
 };
 idd = -1;
