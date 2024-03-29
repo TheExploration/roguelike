@@ -71,6 +71,7 @@ server.on("message", function(msg, rinfo){
             
             for (let address of players.keys()) {
                 let arr = address.split(":");
+                if (arr[0] != rinfo.address && arr[1] != rinfo.port) {
                 
                 server.send(msgpack.encode(move), rinfo.port, address);
                 
