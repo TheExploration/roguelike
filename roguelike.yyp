@@ -37,8 +37,9 @@
   },
   "name":"roguelike",
   "resources":[
-    {"id":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},},
+    {"id":{"name":"execute_shell_simple_ext","path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},},
     {"id":{"name":"oClient","path":"objects/oClient/oClient.yy",},},
+    {"id":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"rLobby","path":"rooms/rLobby/rLobby.yy",},},
