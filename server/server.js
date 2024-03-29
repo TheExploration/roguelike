@@ -73,8 +73,8 @@ server.on("message", function(msg, rinfo){
                 let arr = address.split(":");
                 if (arr[0] != rinfo.address && arr[1] != rinfo.port) {
                 
-                server.send(msgpack.encode(move), rinfo.port, address);
-                
+                    server.send(msgpack.encode(move), rinfo.port, address);
+                }
             }
             
         break;
