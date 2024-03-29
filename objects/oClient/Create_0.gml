@@ -5,7 +5,7 @@ ip = "6927.myqnapcloud.com";
 socket = network_create_socket(network_socket_udp);
 network_connect_raw(socket, ip, port);
 
-player = instance_create_layer(100,100, "Instances",oPlayer);
+player = undefined;
 
 instances = ds_map_create();
 
