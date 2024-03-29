@@ -70,8 +70,8 @@ server.on("message", function(msg, rinfo){
             };
             
             for (let address of players.keys()) {
+                let arr = address.split(":");
                 
-                    
                 server.send(msgpack.encode(move), rinfo.port, address);
                 
             }
