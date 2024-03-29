@@ -1,6 +1,6 @@
 /// @description Networking Step
 
-if (instance_exists(player) && player.my_id == idd) {
+if (!is_undefined(player) && player.my_id == idd) {
 	player_data.x = player.x;
 	player_data.y = player.y;
 	player_data.dir = player.direction;
