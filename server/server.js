@@ -43,9 +43,10 @@ function server_assign_id(address){
 server.on("message", function(msg, rinfo){
     console.log(msgpack.decode(msg));
     data = msgpack.decode(msg);
+
     switch (data.type) {
         case DATATYPE.connect:
-            let jpid = server_assign_id(rinfo.address);
+            let jpid = server_assign_id(rinfo.address, rinfo.port);
             let ping = {
                 type : DATATYPE.connect,
                 time : data.time,
