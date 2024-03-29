@@ -3,7 +3,7 @@ var packet = async_load[? "buffer"];
 buffer_seek(packet, buffer_seek_start,0);
 
 var data = SnapBufferReadMessagePack(packet,0);
-show_debug_message(data);
+
 switch (data.type) {
 	case DATATYPE.connect:
 		latency = current_time - data.time;
@@ -14,7 +14,7 @@ switch (data.type) {
 		}
 	break;
 	case DATATYPE.move: 
-	
+		show_debug_message(data);
 		var find_player = ds_map_find_value(instances, data.id);
 		
 		//If no instances, that means its not been created
