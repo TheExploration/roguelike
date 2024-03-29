@@ -65,8 +65,8 @@ server.on("message", function(msg, rinfo){
                 dir : data.dir,
                 id : data.id
             };
-            let add = rinfo.address;
-            for (let add of players.keys()) {
+            
+            for (let address of players.keys()) {
                 
                     
                 server.send(msgpack.encode(move), rinfo.port, address);
