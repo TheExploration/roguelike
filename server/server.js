@@ -74,7 +74,7 @@ server.on("message", function(msg, rinfo){
                 
                 
                     console.log("sending to "+arr[0]+":"+arr[1]);
-                    server.send(msgpack.encode(move), rinfo.port, rinfo.address);
+                    server.send(msgpack.encode(move), arr[0], arr[1]);
                 
             }
             
