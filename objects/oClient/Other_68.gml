@@ -8,6 +8,9 @@ switch (data.type) {
 	case DATATYPE.connect:
 		latency = current_time - data.time;
 		timeout = 0;
+		if (!instance_exists(oPlayer)) {
+			player = instance_create_layer(100,100, "Instances",oPlayer);
+		}
 		if (idd = -1) {
 			idd = data.id;
 			player.my_id = idd;
