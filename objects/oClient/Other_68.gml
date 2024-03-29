@@ -10,10 +10,9 @@ switch (data.type) {
 		timeout = 0;
 		if (!instance_exists(oPlayer)) {
 			player = instance_create_layer(100,100, "Instances",oPlayer);
-		}
-		if (idd = -1) {
+			player.my_id = data.id;
 			idd = data.id;
-			player.my_id = idd;
+			ds_map_add(instances, data.id, player);	
 		}
 	break;
 	case DATATYPE.move: 
