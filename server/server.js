@@ -20,7 +20,9 @@ const DATATYPE = {
 
 let data;
 
-function server_assign_id(address){
+function server_assign_id(address, port){
+    let add = address + ":" + port;
+
     if (players.has(address)) {
         return players.get(address);
     
