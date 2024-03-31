@@ -12,8 +12,7 @@ if (!is_undefined(player) && player.my_id == idd) {
 
 
 
-ping.time = current_time;
-send_struct(ping);
+
 
 timeout++;
 

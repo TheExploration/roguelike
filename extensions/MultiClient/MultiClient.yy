@@ -11,7 +11,7 @@
   "androidsourcedir":"",
   "author":"",
   "classname":"",
-  "copyToTargets":17179869280,
+  "copyToTargets":17179869292,
   "description":"",
   "exportToGame":true,
   "extensionVersion":"1.0.3",

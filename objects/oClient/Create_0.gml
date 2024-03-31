@@ -37,5 +37,5 @@ enum DATATYPE {
 latency = 0;
 timeout = 0;
 alarm[0] = 120;
-
-
+ping.time = current_time;
+send_struct(ping);
