@@ -6,6 +6,7 @@ socket = network_create_socket(network_socket_udp);
 network_connect_raw(socket, ip, port);
 
 player = undefined;
+instance_create_layer(100,100, "Instances",oChat);
 
 instances = ds_map_create();
 
