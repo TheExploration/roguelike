@@ -90,5 +90,5 @@ server.on("message", function(msg, rinfo){
         break;
 
     }
-    //console.log("message recieved"+ String(rinfo.port)+String( rinfo.address)); 
+    console.log("message recieved"+ String(rinfo.port)+String( rinfo.address)); 
 });
