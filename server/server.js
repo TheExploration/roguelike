@@ -45,7 +45,7 @@ function server_assign_id(address, port){
 }
 
 
-server.on("message", function(msg, rinfo){
+server.on("message", function(msg, rinfo) {
     console.log(msgpack.decode(msg));
     data = msgpack.decode(msg);
 
@@ -76,7 +76,7 @@ server.on("message", function(msg, rinfo){
             for (let address of players.keys()) {
                 let arr = address.split(":");
                 server.send(msgpack.encode(disconnect), +arr[1], arr[0]);
-                
+                server.send(msgpack.encode(dchat), +arr[1], arr[0]);
             }
 
         break;
