@@ -71,7 +71,7 @@ server.on("message", function(msg, rinfo){
             };
             let dchat = {
                 type : DATATYPE.chat,
-                message :  ""
+                message :  String(data.id) + " has left the game."
             };
             for (let address of players.keys()) {
                 let arr = address.split(":");
