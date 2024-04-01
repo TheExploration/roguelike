@@ -99,7 +99,6 @@ server.on("message", function(msg, rinfo){
             let chat = {
                 type : DATATYPE.chat,
                 message : data.message,
-                id : data.id
             };
             
 
