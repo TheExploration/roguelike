@@ -96,6 +96,11 @@ server.on("message", function(msg, rinfo){
             
         break;
         case DATATYPE.chat:
+            let chat = {
+                type : DATATYPE.chat,
+                message : data.message,
+                id : data.id
+            };
             
 
         break;
