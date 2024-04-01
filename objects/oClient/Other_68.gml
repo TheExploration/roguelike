@@ -17,6 +17,6 @@ switch (data.type) {
 	case DATATYPE.chat:
 		handle_chat(data);
 	break;
-		
+	
 	
 }
