@@ -11,6 +11,9 @@ switch (data.type) {
 	case DATATYPE.move: 
 		handle_move(data);
 	break;
+	case DATATYPE.disconnect:
+		handle_disconnect(data);
+	break;
 		
 	
 }
