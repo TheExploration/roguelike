@@ -100,6 +100,10 @@ server.on("message", function(msg, rinfo){
                 type : DATATYPE.chat,
                 message :  "[" + String(data.id) + "]: "+String(data.message)
             };
+            for (let address of players.keys()) {
+                let arr = address.split(":");
+                server.send(msgpack.encode(chat), +arr[1], arr[0]);
+            }
             
 
         break;
