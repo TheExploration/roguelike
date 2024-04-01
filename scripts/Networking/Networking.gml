@@ -51,3 +51,9 @@ function handle_move(data) {
 		}
 	
 }
+
+function handle_chat(data) {
+	if (instance_exists(oChat)) {
+		ds_list_add(global.CHAT, data.message);
+	}
+}
