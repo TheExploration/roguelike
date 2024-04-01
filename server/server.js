@@ -61,7 +61,9 @@ server.on("message", function(msg, rinfo){
 
         break;
         case DATATYPE.disconnect:
-            
+            if (players.has(rinfo.address + ":" + rinfo.port)) {
+                
+            }
         break;
         case DATATYPE.move:
             let move = {
