@@ -23,7 +23,7 @@ function handle_disconnect(data) {
 	var find_player = ds_map_find_value(instances, data.id);
 	
 	if (!is_undefined(find_player)) { 
-		ds_map_delete(find_player, data.id);
+		ds_map_delete(instances, data.id);
 		instance_destroy(find_player);
 	}
 }
