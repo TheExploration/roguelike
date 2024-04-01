@@ -96,6 +96,7 @@ server.on("message", function(msg, rinfo){
             
         break;
         case DATATYPE.chat:
+            let text_message = data.message;
             
         break;
 
