@@ -69,6 +69,11 @@ server.on("message", function(msg, rinfo){
                 type : DATATYPE.disconnect,
                 id : data.id
             };
+            for (let address of players.keys()) {
+                let arr = address.split(":");
+                server.send(msgpack.encode(disconnect), +arr[1], arr[0]);
+                
+            }
 
         break;
         case DATATYPE.move:
