@@ -14,6 +14,9 @@ switch (data.type) {
 	case DATATYPE.disconnect:
 		handle_disconnect(data);
 	break;
+	case DATATYPE.chat:
+		handle_chat(data);
+	break;
 		
 	
 }
