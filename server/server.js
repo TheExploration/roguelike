@@ -35,6 +35,9 @@ function server_assign_id(address, port){
             players.set(add, 3);
         } else if (!players.hasValue(4)) {
             players.set(add, 4);
+        } else {
+            return -1;
+        
         }
     }
     return players.get(add);

@@ -12,7 +12,7 @@ function handle_connect(data) {
 	
 	latency = current_time - data.time;
 	timeout = 0;
-	if (is_undefined(player)) {
+	if (is_undefined(player) && data.id != -1) {
 		player = instance_create_layer(100,100, "Instances",oPlayer);
 		player.my_id = data.id;
 		idd = data.id;
