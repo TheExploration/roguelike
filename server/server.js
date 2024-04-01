@@ -61,7 +61,7 @@ server.on("message", function(msg, rinfo){
 
         break;
         case DATATYPE.disconnect:
-            if (players.has(rinfo.address + ":" + rinfo.port)) {
+            if (players.has(rinfo.address + ":" + rinfo.port) && players.get(rinfo.address + ":" + rinfo.port) == data.id) {
                 players.delete(rinfo.address + ":" + rinfo.port);
             }
         break;
