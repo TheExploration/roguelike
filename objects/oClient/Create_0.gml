@@ -21,11 +21,10 @@ idd = -1;
 ping = {
 	type : DATATYPE.connect,
 	time : current_time
-	
 }
 
 enum DATATYPE {
-	connect,
+	connect, //and Ping
 	disconnect,
 	move,
 	chat,
