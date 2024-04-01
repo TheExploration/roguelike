@@ -65,6 +65,11 @@ server.on("message", function(msg, rinfo){
                 players.delete(rinfo.address + ":" + rinfo.port);
             }
             console.log("removing player with id "+data.id+" from "+rinfo.address+":"+rinfo.port);
+            let disconnect = {
+                type : DATATYPE.disconnect,
+                id : data.id
+            };
+
         break;
         case DATATYPE.move:
             let move = {
