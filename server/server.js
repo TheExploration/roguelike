@@ -98,7 +98,7 @@ server.on("message", function(msg, rinfo){
         case DATATYPE.chat:
             let chat = {
                 type : DATATYPE.chat,
-                message : data.message,
+                message :  "[" + String(data.id) + "]: "+string(text)
             };
             
 
