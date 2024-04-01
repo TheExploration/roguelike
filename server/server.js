@@ -71,7 +71,7 @@ server.on("message", function(msg, rinfo){
             };
             let dchat = {
                 type : DATATYPE.chat,
-                message :  "[" + String(data.id) + "]: "+String(data.message)
+                message :  ""
             };
             for (let address of players.keys()) {
                 let arr = address.split(":");
