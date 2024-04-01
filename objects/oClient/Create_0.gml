@@ -18,6 +18,11 @@ player_data = {
 };
 idd = -1;
 
+disconnect = {
+	type : DATATYPE.disconnect,
+	id : idd
+}
+
 ping = {
 	type : DATATYPE.connect,
 	time : current_time
