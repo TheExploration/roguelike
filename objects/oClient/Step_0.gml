@@ -18,6 +18,6 @@ timeout++;
 
 if (timeout > 60*60){
 	room_goto(rMenu);
-	send_struct(disconnect)
+	send_struct(disconnect);
 	instance_destroy();
 }
