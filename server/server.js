@@ -64,6 +64,7 @@ server.on("message", function(msg, rinfo){
             if (players.has(rinfo.address + ":" + rinfo.port) && players.get(rinfo.address + ":" + rinfo.port) == data.id) {
                 players.delete(rinfo.address + ":" + rinfo.port);
             }
+            console.log("removing player with id "+data.id+" from "+rinfo.address+":"+rinfo.port);
         break;
         case DATATYPE.move:
             let move = {
