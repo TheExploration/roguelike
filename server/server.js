@@ -57,10 +57,6 @@ server.on("message", function(msg, rinfo) {
                 time : data.time,
                 id : jpid
             };
-            let jchat = {
-                type : DATATYPE.chat,
-                message :  String(jpid) + " has joined the game."
-            };
 
             server.send(msgpack.encode(ping), rinfo.port, rinfo.address);
 
