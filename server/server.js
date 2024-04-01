@@ -79,7 +79,7 @@ server.on("message", function(msg, rinfo){
                 let arr = address.split(":");
                 
                 if (arr[0] != rinfo.address || +arr[1] != rinfo.port) {
-                    console.log("sending to "+arr[0]+":"+arr[1]);
+                    
                     server.send(msgpack.encode(move), +arr[1], arr[0]);
                 }
             }
@@ -90,5 +90,5 @@ server.on("message", function(msg, rinfo){
         break;
 
     }
-    console.log("message recieved"+ String(rinfo.port)+String( rinfo.address)); 
+    //console.log("message recieved"+ String(rinfo.port)+String( rinfo.address)); 
 });
